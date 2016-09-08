@@ -14,7 +14,7 @@ var pathExists = require('path-exists');
 var chalk = require('chalk');
 
 module.exports = function(appPath, appName, verbose, originalDirectory) {
-  var ownPath = path.join(appPath, 'node_modules', 'react-scripts');
+  var ownPath = path.join(appPath, 'node_modules', 'dc-react-scripts');
 
   var appPackage = require(path.join(appPath, 'package.json'));
 
@@ -32,7 +32,7 @@ module.exports = function(appPath, appName, verbose, originalDirectory) {
 
   // explicitly specify ESLint config path for editor plugins
   appPackage.eslintConfig = {
-    extends: './node_modules/react-scripts/config/eslint.js',
+    extends: './node_modules/dc-react-scripts/config/eslint.js',
   };
 
   fs.writeFileSync(
