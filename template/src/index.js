@@ -1,9 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import App from './App';
 import './index.css';
+import { AppContainer } from 'react-hot-loader';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+render(
+    <AppContainer>
+        <App />
+    </AppContainer>,
+    document.getElementById('root')
 );
+
+
+if (module.hot) {
+   module.hot.accept('./App', () => {
+       const ReplaceApp = require('./App').default;
+       render(
+           <AppContainer>
+               <ReplaceApp />
+           </AppContainer>,
+           document.getElementById('root')
+       );
+   });
+}

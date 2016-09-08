@@ -46,6 +46,7 @@ module.exports = {
     // to the events received by the client above, and applies updates (such as
     // new CSS) to the running application.
     require.resolve('webpack/hot/dev-server'),
+    require.resolve('react-hot-loader/patch'),
     // We ship a few polyfills by default.
     require.resolve('./polyfills'),
     // Finally, this is your app's code:
@@ -116,7 +117,7 @@ module.exports = {
       // in development "style" loader enables hot editing of CSS.
       {
         test: /\.css$/,
-        loader: 'style!css!postcss'
+        loader: 'style!css?modules&importLoaders=1&localIdentName=[name]__[local]__[hash:base64:5]!postcss'
       },
       // JSON is not enabled by default in Webpack but both Node and Browserify
       // allow it implicitly so we also enable it.

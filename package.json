@@ -1,14 +1,14 @@
 {
-  "name": "react-scripts",
+  "name": "dc-react-scripts",
   "version": "0.4.1",
   "description": "Configuration and scripts for Create React App.",
-  "repository": "facebookincubator/create-react-app",
+  "repository": "davecoates/create-react-app",
   "license": "BSD-3-Clause",
   "engines": {
     "node": ">=4"
   },
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/davecoates/create-react-app/issues"
   },
   "scripts": {
     "build": "node scripts/build.js",
@@ -75,7 +75,8 @@
     "url-loader": "0.5.7",
     "webpack": "1.13.2",
     "webpack-dev-server": "1.15.1",
-    "whatwg-fetch": "1.0.0"
+    "whatwg-fetch": "1.0.0",
+    "react-hot-loader": "^3.0.0-beta.3"
   },
   "devDependencies": {
     "bundle-deps": "1.0.0",
